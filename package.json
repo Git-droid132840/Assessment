@@ -1,0 +1,28 @@
+{
+  "name": "gxp-compliance-assessment",
+  "version": "3.1.0",
+  "private": true,
+  "description": "GxP Compliance Assessment System - 21 CFR Part 11, EU Annex 11, Data Integrity, GDPR - Pharma Connections",
+  "engines": { "node": "22.x" },
+  "scripts": {
+    "vercel-build": "npm install --prefix client --include=dev && npm run build --prefix client",
+    "install:all": "npm install --prefix server && npm install --prefix client",
+    "build": "npm run build --prefix client",
+    "start": "npm start --prefix server",
+    "dev:server": "npm run dev --prefix server",
+    "dev:client": "npm run dev --prefix client",
+    "test": "npm test --prefix server",
+    "verify-audit": "npm run verify-audit --prefix server",
+    "demo-data": "npm run demo-data --prefix server"
+  },
+  "dependencies": {
+    "@vercel/blob": "2.8.2",
+    "docx": "9.0.2",
+    "express": "4.21.1",
+    "express-rate-limit": "7.4.1",
+    "helmet": "8.0.0",
+    "knex": "3.1.0",
+    "multer": "1.4.5-lts.1",
+    "pg": "8.13.0"
+  }
+}
